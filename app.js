@@ -6,7 +6,7 @@ const USERS = {
     "Y7M5LK9P": "user5.js",
 
     "B2D6FH8X": "user6.js",
-    "AE-U1J4RS7K": "users/user7.js",
+    "NL-U1J4RS7K": "users/user7.js",
     "RT-E9T3ZA5N": "users/user8.js",
     "RT-G6P2VX4M": "users/user9.js",
     "RT-W8Q1BN3L": "users/user10.js",
