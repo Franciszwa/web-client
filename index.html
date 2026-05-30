@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>عع</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast">اشتراک با موفقیت ذخیره شد</div>
+
+<div class="bg"></div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="top">
+    <i class="fa-solid fa-rocket"></i>
+    <h1>Tunnel</h1>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginBox" class="login">
+    <h2>ورود به اشتراک</h2>
+    <input id="userCode" placeholder="XXXXXXXX">
+    <button id="loginBtn">ورود</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="panel">
+
+    <div class="grid">
+
+      <div class="card">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>وضعیت</span>
+        <b id="status">نامشخص</b>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-infinity"></i>
+        <span>حجم</span>
+        <b id="volume">نامشخص</b>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-users"></i>
+        <span>کاربر</span>
+        <b id="users">نامشخص</b>
+      </div>
+
+      <!-- SPEED -->
+      <div class="speed-box">
+
+        <div class="speed-card down">
+          <i class="fa-solid fa-download"></i>
+          <span>دانلود</span>
+          <b id="down">---</b>
+        </div>
+
+        <div class="speed-card up">
+          <i class="fa-solid fa-upload"></i>
+          <span>آپلود</span>
+          <b id="up">---</b>
+        </div>
+
+      </div>
+
+      <!-- IP BOX -->
+      <div id="ipBox" class="ip-card" style="display:none;">
+
+        <div class="ip-header">
+          <div class="ip-title">
+            <img id="flag" src="" alt="flag">
+            <span>  IP  </span>
+          </div>
+
+          <span class="ip-mode">SSH</span>
+        </div>
+
+        <b id="ipValue">163.5.254.239</b>
+      </div>
+
+      <!-- SUB -->
+      <div class="card sub-card">
+
+        <div class="sub-header">
+          <div>
+            <i class="fa-solid fa-calendar-days"></i>
+            <span></span>
+          </div>
+
+          <a class="charge-btn"
+             href="https://t.me/Franciszw"
+             target="_blank">
+            <i class="fa-solid fa-bolt"></i>
+            شارژ اشتراک
+          </a>
+        </div>
+
+        <b id="daysLeft">30 روز</b>
+
+        <div class="user-box">
+          <span id="userShow"></span>
+
+          <button id="copyUserBtn">
+            <i class="fa-solid fa-copy"></i>
+            کپی
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONFIG -->
+    <div class="config">
+
+      <div class="head">
+        <span>
+          <i class="fa-solid fa-link"></i>
+          Subscription Link
+        </span>
+
+        <button id="copyBtn">
+          <i class="fa-solid fa-copy"></i>
+          کپی کانفیگ
+        </button>
+      </div>
+
+      <pre id="cfg">بعد از اتصال بارگذاری می‌شود...</pre>
+
+    </div>
+
+    <!-- DOWNLOAD BUTTONS -->
+    <div class="store-box">
+
+      <!-- ANDROID -->
+      <a class="play"
+         href="https://play.google.com/store/apps/details?id=com.hypertunnel.android"
+         target="_blank">
+        <i class="fa-brands fa-google-play"></i>
+        Android Download
+      </a>
+
+      <!-- iOS -->
+      <a class="play ios"
+         href="https://apps.apple.com/app/id6450000000"
+         target="_blank">
+        <i class="fa-brands fa-apple"></i>
+        iOS Download
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
