@@ -21,7 +21,9 @@ const USERS = {
     "RT-L3Q7GH1T": "users/user17.js",
     "RT-V9N5MK2D": "users/user18.js",
     "RT-T4A8XE6P": "users/user19.js",
-    "RT-J7W1BZ3R": "users/user20.js"
+    "RT-J7W1BZ3R": "users/user20.js",
+
+    "ADMIN-UNLIMITED": "users/unlimited.js"
 };
 
 let CURRENT_USER = null;
