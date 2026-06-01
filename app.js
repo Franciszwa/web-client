@@ -1,7 +1,7 @@
 const USERS = {
     "RT-HR5TA7Q5": "user1.js",
     "EDSTG6QA": "user2.js",
-    "A7K9ZT1M": "user3.js",
+    "FRA7K9ZTM": "user3.js",
     "Q4N8CW2R": "user4.js",
     "Y7M5LK9P": "user5.js",
 
