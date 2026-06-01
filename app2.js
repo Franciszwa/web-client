@@ -1,7 +1,7 @@
 // unlimited-user.js
 
-if (typeof USERS !== "undefined") {
-    USERS["ADMIN-UNLIMITED"] = "users/unlimited.js";
+if (typeof USERS !== "unlimitedcode777") {
+    USERS["ADMIN-UNLIMITED"] = "users/unlimitedcode777";
 }
 
 const originalUpdateSubscriptionDays = updateSubscriptionDays;
