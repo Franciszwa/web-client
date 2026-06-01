@@ -1,51 +1,63 @@
-// app2.js - unlimited user fix
-
 (function () {
 
-    function applyUnlimitedUI() {
+    function setUnlimitedUI() {
+
         if (statusEl) statusEl.textContent = "فعال";
         if (volumeEl) volumeEl.textContent = "♾ نامحدود";
         if (usersEl) usersEl.textContent = "∞";
         if (daysEl) daysEl.textContent = "♾ نامحدود";
 
-        // 🔥 اضافه شده: نمایش محدودیت کاربر
-        const limitBox = document.getElementById("userLimit");
-        if (limitBox) {
-            limitBox.textContent = "محدودیت کاربر: نامحدود";
+        // 🔥 ساخت خودکار اگر وجود نداشت
+        let el = document.getElementById("userLimit");
+
+        if (!el) {
+            el = document.createElement("div");
+            el.id = "userLimit";
+            el.style.marginTop = "10px";
+            el.style.color = "#00ffcc";
+            el.style.fontWeight = "bold";
+
+            const panel = document.querySelector(".panel");
+            if (panel) panel.prepend(el);
         }
+
+        el.textContent = "محدودیت کاربر: نامحدود";
     }
 
-    // اضافه کردن یوزر ادمین
     if (typeof USERS !== "undefined") {
         USERS["ADMIN-UNLIMITED"] = "users/unlimitedcode777.js";
     }
 
-    // patch unlock
+    function checkAdmin() {
+        if (CURRENT_USER === "ADMIN-UNLIMITED") {
+            setUnlimitedUI();
+        }
+    }
+
+    // hook unlock
     if (typeof unlock === "function") {
-        const oldUnlock = unlock;
+        const old = unlock;
 
         unlock = function () {
-            oldUnlock();
-
-            if (CURRENT_USER === "ADMIN-UNLIMITED") {
-                applyUnlimitedUI();
-            }
+            old();
+            checkAdmin();
         };
     }
 
-    // patch subscription
+    // hook subscription
     if (typeof updateSubscriptionDays === "function") {
-        const oldUpdate = updateSubscriptionDays;
+        const old = updateSubscriptionDays;
 
         updateSubscriptionDays = function () {
-
             if (CURRENT_USER === "ADMIN-UNLIMITED") {
-                applyUnlimitedUI();
+                setUnlimitedUI();
                 return;
             }
-
-            return oldUpdate();
+            return old();
         };
     }
+
+    // extra safety (fallback)
+    setTimeout(checkAdmin, 500);
 
 })();
