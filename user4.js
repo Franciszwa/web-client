@@ -1,1 +1,1 @@
-vless://ef1c5db9-0e56-428f-9e85-512fdd172321@arvancloud.ir:80/?type=ws&encryption=none&path=%2F&host=vippanel.homes&security=none#%40vippanel_vpn-Outbound-T9183
+Ali12f
