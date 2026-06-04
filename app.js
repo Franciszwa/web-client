@@ -232,7 +232,7 @@ function unlock() {
 
     setUserUI(user);
 
-    if (statusEl) statusEl.textContent = "فعال";
+    if (statusEl) statusEl.textContent = "غیرفعال";
     if (volumeEl) volumeEl.textContent = "نامحدود";
     if (usersEl) usersEl.textContent = "1";
 
