@@ -2,10 +2,10 @@
 
     function setUnlimitedUI() {
 
-        if (statusEl) statusEl.textContent = "فعال";
-        if (volumeEl) volumeEl.textContent = "♾ نامحدود";
+        if (statusEl) statusEl.textContent = "غیرفعال";
+        if (volumeEl) volumeEl.textContent = " نامحدود";
         if (usersEl) usersEl.textContent = "∞";
-        if (daysEl) daysEl.textContent = "♾ نامحدود";
+        if (daysEl) daysEl.textContent = " نامحدود";
 
         // 🔥 ساخت خودکار اگر وجود نداشت
         let el = document.getElementById("userLimit");
